@@ -13,7 +13,7 @@ function NavBar() {
       <ul className="NavList">
         {Screens.map((screen) => (
           <Link to={`${screen.path}`}>
-            <li style={{ color: "#fff" }}>{screen.name}</li>
+            <li className="NavListItem">{screen.name}</li>
           </Link>
         ))}
       </ul>
