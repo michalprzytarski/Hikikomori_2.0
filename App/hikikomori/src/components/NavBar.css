@@ -1,10 +1,12 @@
+@import "../constants/Colors.css";
+
 .NavBar {
   display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
-  background-color: white;
-  color: rgb(110, 110, 110);
+  background-color: var(--backgroud-color);
+  color: var(--text-color);
 }
 
 .NavList {
@@ -17,6 +19,15 @@
 }
 
 .NavListItem {
-  color: rgb(110, 110, 110);
+  color: var(--text-color);
   text-decoration: none;
+}
+
+.NavListItem:hover {
+  color: var(--tint-text-color);
+  text-shadow: 3px, 3px, 3px, red;
+}
+
+.NavBar h1 {
+  color: var(--tint-text-color);
 }
