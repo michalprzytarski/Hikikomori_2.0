@@ -25,7 +25,9 @@
 
 .NavListItem:hover {
   color: var(--tint-text-color);
-  text-shadow: 3px, 3px, 3px, red;
+}
+.active{
+  color: var(--tint-text-color);
 }
 
 .NavBar h1 {

@@ -1,5 +1,8 @@
 :root {
   --text-color: #808080;
+  --text-color-2: rgb(157,166,248);
   --tint-text-color: #009fa5;
   --backgroud-color: #ffffff;
+  --background: rgb(157,166,248);
+  --background-gradient-2: linear-gradient(90deg, rgba(157,166,248,0) 47%, rgba(149,188,247,0.3477766106442577) 71%);
 }

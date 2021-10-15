@@ -1,5 +1,6 @@
 .container-home{
-    height: 90vh;
+    background: var(--background);
+    background: var(--background-gradient-2);
     display: flex;
     flex-direction: row;
 }
@@ -8,8 +9,7 @@
 }
 
 #home-image{
-    background: rgb(157,166,248);
-    background: linear-gradient(90deg, rgba(157,166,248,0) 0%, rgba(149,188,247,0.35) 53%);
+
     width: 60vw;
     height: 90vh;
 }

@@ -1,0 +1,59 @@
+@import "../../constants/Colors.css";
+.container-faq{
+    background: var(--background);
+    background:  var(--background-gradient-2);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: "Roboto Condensed";
+}
+#title{
+    color: var(--text-color-2);
+    font-size: 40px;
+    position: relative;
+    padding-top: 2vh;
+    letter-spacing: 5px;
+}
+#container-group-questions{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.container-questions{
+    width: 25vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+.container-questions h1{
+    color: var(--text-color-2);
+    letter-spacing: 1px;
+}
+
+.container-questions p{
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.container-icons{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container-icons img{
+    height: 10%;
+}
+.container-icons hr{
+    width: 0;
+    height: 100px;
+    opacity: 0.5;
+}
+#line-title{
+    height: 0;
+    width: 50vw;
+    opacity: 0.5;
+}
