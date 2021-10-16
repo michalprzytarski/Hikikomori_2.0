@@ -22,13 +22,24 @@ namespace Server.Controllers
         {
             this._context = context;
         }
-
+         
         [HttpGet]
-        public JsonResult Get(User user)
+        public JsonResult Get()
         {
             IEnumerable<User> users = _context.Users;
-            return new JsonResult(users.ToList());
+            return new JsonResult(users);
         }
-       
+
+        [HttpGet("{Username}/{Password}")]
+        public JsonResult Get(string username, string password)
+        {
+            IEnumerable<User> users = _context.Users;
+            var currentUser = _context.Users.Where(u => u.Username == username && u.Password == password).FirstOrDefault();
+            if (currentUser == null)
+            {
+                return new JsonResult(null);
+            }
+            return new JsonResult(currentUser);
+        }
     }
 }

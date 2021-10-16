@@ -6,31 +6,34 @@ export default function LoginScreen() {
   const [password, setPassword] = useState("");
 
   async function handleSubmit(event) {
-    const res = await fetch("http://localhost:5000/api/users");
+    console.log("start fetchowania");
+    const res = await fetch("https://localhost:44309/api/Login");
     const user = await res.json();
+    console.log(user);
+    console.log("powinno juz wydrukowac");
   }
 
   return (
     <div className="LoginWrapper">
-      <div onSubmit={() => handleSubmit()} className="LoginDialog">
-        <input
-          type="username"
-          name="username"
-          placeholder="Username"
-          value={username}
-          onChange={(event) => setUsername(event.target.value)}
-          //   required
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={password}
-          onChange={(event) => setPassword(event.target.value)}
-          //   required
-        />
-        <button onClick={handleSubmit}>Log In</button>
-      </div>
+      {/* <form onSubmit={() => handleSubmit()} className="LoginDialog"> */}
+      <input
+        type="username"
+        name="username"
+        placeholder="Username"
+        value={username}
+        onChange={(event) => setUsername(event.target.value)}
+        //   required
+      />
+      <input
+        type="password"
+        name="password"
+        placeholder="Password"
+        value={password}
+        onChange={(event) => setPassword(event.target.value)}
+        //   required
+      />
+      <button onClick={handleSubmit}>Log In</button>
+      {/* </form> */}
     </div>
   );
 }
