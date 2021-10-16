@@ -1,0 +1,30 @@
+.container-calendar{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: "Roboto Condensed";
+    background-color: rgba(180, 181, 194, 0.329);
+    align-items: center;
+}
+
+.container-calendar h1, .container-calendar h2{
+    font-weight: 100;
+}
+
+#calendar-title{
+    font-size: 50px;
+    letter-spacing: 4px;
+    padding: 0;
+    padding-top: 3vh;
+    margin: 0;
+}
+
+.calendarTiles{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    height:  50vh;
+    width: 80vw;
+}
