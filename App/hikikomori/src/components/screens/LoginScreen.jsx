@@ -9,13 +9,15 @@ export default function LoginScreen() {
   const { userame, setUsername } = useContext(UserContext);
 
   async function handleSubmit(event) {
-    const res = await fetch("http://localhost:5000/api/users");
+    console.log("start fetchowania");
+    const res = await fetch("https://localhost:44309/api/Login");
     const user = await res.json();
     console.log(user);
 
     if (user !== undefined) {
       setUsername(user.username);
     }
+
   }
 
   return (
@@ -39,6 +41,7 @@ export default function LoginScreen() {
         />
         <button onClick={handleSubmit}>Log In</button>
       </div>
+
     </div>
   );
 }
