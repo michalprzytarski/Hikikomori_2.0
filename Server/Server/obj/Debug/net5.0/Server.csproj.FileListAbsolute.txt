@@ -127,3 +127,6 @@ C:\Users\SuperCiuper\Documents\GitHub\Hikikomori_2.0\Server\Server\obj\Debug\net
 C:\Users\SuperCiuper\Documents\GitHub\Hikikomori_2.0\Server\Server\obj\Debug\net5.0\ref\Server.dll
 C:\Users\SuperCiuper\Documents\GitHub\Hikikomori_2.0\Server\Server\obj\Debug\net5.0\Server.pdb
 C:\Users\SuperCiuper\Documents\GitHub\Hikikomori_2.0\Server\Server\obj\Debug\net5.0\Server.genruntimeconfig.cache
+C:\Projekty\Programowanie\best-hacks\Hikikomori_2.0\Server\Server\obj\Debug\net5.0\Server.dll
+C:\Projekty\Programowanie\best-hacks\Hikikomori_2.0\Server\Server\obj\Debug\net5.0\ref\Server.dll
+C:\Projekty\Programowanie\best-hacks\Hikikomori_2.0\Server\Server\obj\Debug\net5.0\Server.pdb

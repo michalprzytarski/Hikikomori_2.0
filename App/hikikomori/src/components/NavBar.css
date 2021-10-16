@@ -26,7 +26,7 @@
 .NavListItem:hover {
   color: var(--tint-text-color);
 }
-.active{
+.active {
   color: var(--tint-text-color);
 }
 
