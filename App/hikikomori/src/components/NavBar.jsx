@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import "./NavBar.css";
 import { NavLink } from "react-router-dom";
 
-import { Screens, loginScreen } from "./screens/screens";
-import { getUsername, setUsername } from "../userData";
+import { Screens } from "./screens/screens";
+import { UserContext } from "../userContext";
 import LoggingButton from "./LoggingButton";
 
 function NavBar() {
   const [name, setName] = useState(undefined);
+
+  const { username, setUsername } = useContext(UserContext);
 
   return (
     <nav className="NavBar">
@@ -29,7 +31,7 @@ function NavBar() {
         ))}
       </ul>
       <LoggingButton />
-      <button onClick={() => console.log(getUsername())}>TEST</button>
+      <button onClick={() => console.log(username)}>TEST</button>
     </nav>
   );
 }

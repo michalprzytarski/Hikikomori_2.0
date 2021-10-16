@@ -1,18 +1,17 @@
-import React, { useState } from "react";
-import { getUsername, setUsername } from "../userData";
+import React, { useState, useContext } from "react";
+import { UserContext } from "../userContext";
 import { NavLink } from "react-router-dom";
 import { loginScreen } from "./screens/screens";
 
 export default function LoggingButton() {
-  const [name, setName] = useState(getUsername());
-  if (name !== undefined)
+  const { username, setUsername } = useContext(UserContext);
+  if (username !== undefined)
     return (
       <div>
-        <h5>Hello, {name}</h5>
+        <h5>Hello, {username}</h5>
         <button
           onClick={() => {
             setUsername(undefined);
-            setName(undefined);
           }}
         >
           Wyloguj

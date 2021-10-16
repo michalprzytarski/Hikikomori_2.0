@@ -1,10 +1,12 @@
-import React, { useState } from "react";
-import { setUsername as setUser } from "../../userData";
+import React, { useState, useContext } from "react";
+import { UserContext } from "../../userContext";
 import "./LoginScreen.css";
 
 export default function LoginScreen() {
-  const [username, setUsername] = useState("");
+  const [_username, _setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const { userame, setUsername } = useContext(UserContext);
 
   async function handleSubmit(event) {
     const res = await fetch("http://localhost:5000/api/users");
@@ -12,7 +14,7 @@ export default function LoginScreen() {
     console.log(user);
 
     if (user !== undefined) {
-      setUser(user.username);
+      setUsername(user.username);
     }
   }
 
@@ -23,8 +25,8 @@ export default function LoginScreen() {
           type="username"
           name="username"
           placeholder="Username"
-          value={username}
-          onChange={(event) => setUsername(event.target.value)}
+          value={_username}
+          onChange={(event) => _setUsername(event.target.value)}
           //   required
         />
         <input

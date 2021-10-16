@@ -11,16 +11,9 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar />
-        <useContext.
-        <Switch>
-          {/* <ul style={{ listStyle: "none" }}>
-            {Screens.map((screen) => (
-              <li key={screen.key}>
-                <Route path={screen.path} exact component={screen.screen} />
-              </li>
-            ))}
-          </ul> */}
+        <UserContext.Provider value={{ username, setUsername }}>
+          <NavBar />
+
           <Route
             path={Screens.find((x) => x.key === 1).path}
             component={Screens.find((x) => x.key === 1).screen}
@@ -42,7 +35,7 @@ function App() {
             exact
           />
           <Route path={loginScreen.path} component={loginScreen.screen} exact />
-        </Switch>
+        </UserContext.Provider>
       </Router>
     </div>
   );
