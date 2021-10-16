@@ -3,6 +3,7 @@
 .NavBar {
   font-family: "Roboto Condensed";
   display: flex;
+  justify-content: space-around;
   align-items: center;
   min-height: 10vh;
   background-color: var(--backgroud-color);
@@ -10,6 +11,7 @@
 }
 
 .NavList {
+  width: 30vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
