@@ -1,0 +1,29 @@
+@import "../../constants/Colors.css";
+
+.AppointmentScreenWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.AnswerList {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  cursor: pointer;
+  list-style: none;
+}
+
+.AnswerList p {
+  background-color: var(--tint-text-color);
+  border-radius: 10px;
+  width: 50%;
+  margin: 10px;
+}
+
+.FinalAnswer {
+  color: var(--tint-text-color);
+  font-size: x-large;
+  font-weight: bolder;
+}

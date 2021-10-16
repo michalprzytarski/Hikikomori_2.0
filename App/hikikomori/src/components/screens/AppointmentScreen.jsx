@@ -1,58 +1,46 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import { questions } from "../../constants/AppointmentQuestions";
+
+import "./AppiontmentScreen.css";
 
 export default function AppointmentScreen() {
   const [currentQuestion, setCurrentQuestion] = useState(
     findQuestion(`initial`)
   );
 
-  useEffect(() => {
-    setCurrentQuestion(findQuestion(`initial`));
-    return () => {};
-  }, []);
-
   function findQuestion(questionName) {
     console.log(questions.find((x) => x.name === questionName));
     return questions.find((x) => x.name === questionName);
   }
 
-  function printQuestion(question) {
-    return (
-      <div>
-        <h3>{question.question}</h3>
-        <ul>
-          {question.answers.map((answer) => (
-            <li>{answer.answer}</li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
-
   function handleQuiz(question) {
     if (question.finalAnswer !== undefined) {
-      return <h1>{question.finalAnswer}</h1>;
+      return <p className="FinalAnswer">{question.finalAnswer}</p>;
     } else
       return (
         <div>
-          <h3>{question.question}</h3>
+          <p>{question.question}</p>
           {question.answers.map((answer) => (
-            <button
+            <div
+              className="AnswerList"
               onClick={() =>
                 setCurrentQuestion(() => findQuestion(answer.nextQuestion))
               }
             >
-              {answer.answer}
-            </button>
+              <p>{answer.answer}</p>
+            </div>
           ))}
         </div>
       );
   }
   return (
-    <div>
+    <div className="AppointmentScreenWrapper">
       <h1>AppointmentScreen</h1>
       {handleQuiz(currentQuestion)}
+      <button onClick={() => setCurrentQuestion(findQuestion(`initial`))}>
+        Restart
+      </button>
     </div>
   );
 }
