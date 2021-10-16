@@ -41,6 +41,5 @@ namespace Server.Controllers
             }
             return new JsonResult(currentUser);
         }
-       
     }
 }

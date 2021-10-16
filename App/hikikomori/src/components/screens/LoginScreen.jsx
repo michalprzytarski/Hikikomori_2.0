@@ -7,7 +7,7 @@ export default function LoginScreen() {
 
   async function handleSubmit(event) {
     console.log("start fetchowania");
-    const res = await fetch("http://localhost:5000/api/users");
+    const res = await fetch("https://localhost:44309/api/Login");
     const user = await res.json();
     console.log(user);
     console.log("powinno juz wydrukowac");
