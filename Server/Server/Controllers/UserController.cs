@@ -24,10 +24,16 @@ namespace Server.Controllers
         }
 
         [HttpGet]
-        public JsonResult Get()
+        public JsonResult Get(User user)
         {
+            var lala = _context.Users.Where(u => u.Username == user.Username && ).FirstOrDefault();
+            if (lala == null)
+            {
+                // nie ma takieogo gościa 
+            }
             IEnumerable<User> users = _context.Users;
             return new JsonResult(users.ToList());
         }
+       
     }
 }
