@@ -18,17 +18,10 @@ namespace Server.Controllers
             this._context = context;
         }
 
-        [HttpGet]
-        public JsonResult Get()
-        {
-            IEnumerable<User> users = _context.Users;
-            return new JsonResult(users.ToList());
-        }
-
-        [HttpPost("{username}/{password}")]
+        [HttpGet("{username}/{password}")]
         public JsonResult CheckLogIn(string username, string password)
         {
-            var currentUser = _context.Users.Where(u => u.Username == username && u.Password == username).FirstOrDefault();
+            var currentUser = _context.Users.Where(u => u.Username == username && u.Password == password).FirstOrDefault();
             if (currentUser == null)
             {
                 return new JsonResult(null);
