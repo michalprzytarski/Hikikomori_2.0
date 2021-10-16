@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { setUsername as setUser } from "../../userData";
 import "./LoginScreen.css";
 
 export default function LoginScreen() {
@@ -8,6 +9,11 @@ export default function LoginScreen() {
   async function handleSubmit(event) {
     const res = await fetch("http://localhost:5000/api/users");
     const user = await res.json();
+    console.log(user);
+
+    if (user !== undefined) {
+      setUser(user.username);
+    }
   }
 
   return (

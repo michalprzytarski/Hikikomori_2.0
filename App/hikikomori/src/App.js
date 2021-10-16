@@ -1,14 +1,18 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import { useState, useContext } from "react";
+import { UserContext } from "./userContext";
 
-import { Screens } from "./components/screens/screens";
+import { Screens, loginScreen } from "./components/screens/screens";
 
 function App() {
+  const [username, setUsername] = useState(undefined);
   return (
     <div className="App">
       <Router>
         <NavBar />
+        <useContext.
         <Switch>
           {/* <ul style={{ listStyle: "none" }}>
             {Screens.map((screen) => (
@@ -20,23 +24,24 @@ function App() {
           <Route
             path={Screens.find((x) => x.key === 1).path}
             component={Screens.find((x) => x.key === 1).screen}
+            exact
           />
           <Route
             path={Screens.find((x) => x.key === 2).path}
-            component={Screens.find((x) => x.key === 3).screen}
+            component={Screens.find((x) => x.key === 2).screen}
+            exact
           />
           <Route
             path={Screens.find((x) => x.key === 3).path}
             component={Screens.find((x) => x.key === 3).screen}
+            exact
           />
           <Route
             path={Screens.find((x) => x.key === 4).path}
             component={Screens.find((x) => x.key === 4).screen}
+            exact
           />
-          <Route
-            path={Screens.find((x) => x.key === 5).path}
-            component={Screens.find((x) => x.key === 5).screen}
-          />
+          <Route path={loginScreen.path} component={loginScreen.screen} exact />
         </Switch>
       </Router>
     </div>
