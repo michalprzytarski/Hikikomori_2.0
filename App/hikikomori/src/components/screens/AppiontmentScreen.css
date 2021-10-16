@@ -1,29 +1,75 @@
 @import "../../constants/Colors.css";
 
 .AppointmentScreenWrapper {
+  background: var(--background);
+  background: var(--background-gradient-2);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100%;
+  justify-content: flex-start;
+  height: 90vh;
+}
+
+#appointment-questions div{
+  width: 50vw;
+}
+.AppointmentScreenWrapper hr{
+  width: 50vw;
+  height: 0;
+  opacity: 0.5;
+}
+
+.AppointmentScreenWrapper h1{
+  color: var(--text-color-2);
+  font-size: 40px;
+  position: relative;
+  padding-top: 2vh;
+  letter-spacing: 5px;
 }
 .AnswerList {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  color: var(--text-color);
+  color: white;
   cursor: pointer;
   list-style: none;
 }
+#question{
+  font-weight: 100;
+  letter-spacing: 2px;
+  font-size: 25px;
 
+}
 .AnswerList p {
-  background-color: var(--tint-text-color);
-  border-radius: 10px;
-  width: 50%;
-  margin: 10px;
+  width: 40vw;
+  height: 5vh;
+  background-color: rgba(152, 193, 255, 0.596);
+  border: none;
+  border-radius: 40px;
+  color: white;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.397);
+  font-size: 30px;
+  font-weight: 700;
+}
+#appointment-restart{
+  width: 40vw;
+  height: 5vh;
+  position: relative;
+  top: 20vh;
+  background-color: #009fa588;
+  border: none;
+  border-radius: 40px;
+  color: white;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.397);
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .FinalAnswer {
-  color: var(--tint-text-color);
-  font-size: x-large;
-  font-weight: bolder;
+  font-weight: 100;
+  letter-spacing: 2px;
+  font-size: 25px;
 }

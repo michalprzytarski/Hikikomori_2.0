@@ -10,7 +10,6 @@ export default function AppointmentScreen() {
   );
 
   function findQuestion(questionName) {
-    console.log(questions.find((x) => x.name === questionName));
     return questions.find((x) => x.name === questionName);
   }
 
@@ -20,7 +19,7 @@ export default function AppointmentScreen() {
     } else
       return (
         <div>
-          <p>{question.question}</p>
+          <p id="question">{question.question}</p>
           {question.answers.map((answer) => (
             <div
               className="AnswerList"
@@ -36,9 +35,12 @@ export default function AppointmentScreen() {
   }
   return (
     <div className="AppointmentScreenWrapper">
-      <h1>AppointmentScreen</h1>
+      <h1>MAKE AN APPOINTMENT</h1>
+      <hr></hr>
+      <div id="appointment-questions">
       {handleQuiz(currentQuestion)}
-      <button onClick={() => setCurrentQuestion(findQuestion(`initial`))}>
+      </div>
+      <button id="appointment-restart" onClick={() => setCurrentQuestion(findQuestion(`initial`))}>
         Restart
       </button>
     </div>

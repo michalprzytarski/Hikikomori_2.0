@@ -17,7 +17,7 @@
     padding: 0;
     margin: 0;
     position: absolute;
-    bottom: 0;
+    bottom:0; 
     right: 20vw;
     width: 20%;
 }
@@ -69,7 +69,7 @@
     color: white;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.26);
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.397);
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 700;
 
 }
@@ -78,8 +78,8 @@
     background: rgba(152, 193, 255, 0.233);
     z-index: 2;
     border-Radius: 50%;
-    width: 650px;
-    height: 650px;
+    width: 30vw;
+    height: 30vw;
     top: 15vh;
     left: 3vw;
     position:relative;

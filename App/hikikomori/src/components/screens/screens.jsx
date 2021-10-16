@@ -6,7 +6,7 @@ import HomeScreen from "./HomeScreen";
 
 export const Screens = [
   { name: "Home", path: "/", screen: HomeScreen },
-  { name: "Appontment", path: "/appontment", screen: AppointmentScreen },
+  { name: "Appointment", path: "/appointment", screen: AppointmentScreen },
   { name: "Calendar", path: "/calendar", screen: CalendarScreen },
   { name: "FAQ", path: "/faq", screen: FaqScreen },
 ];
