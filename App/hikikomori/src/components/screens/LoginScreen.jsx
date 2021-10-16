@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { UserContext } from "../../userContext";
+import { UserContext, UserName } from "../../userContext";
 import "./LoginScreen.css";
 
 export default function LoginScreen() {
@@ -7,6 +7,7 @@ export default function LoginScreen() {
   const [password, setPassword] = useState("");
 
   const { userame, setUsername } = useContext(UserContext);
+  const { name, setName } = useContext(UserName);
 
   async function handleSubmit(event) {
     console.log("start fetchowania");
@@ -18,6 +19,7 @@ export default function LoginScreen() {
 
     if (user !== null) {
       setUsername(user.Username);
+      setName(user.Name);
     }
   }
 

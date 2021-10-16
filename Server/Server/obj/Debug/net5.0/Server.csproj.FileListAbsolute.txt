@@ -130,3 +130,4 @@ C:\Users\SuperCiuper\Documents\GitHub\Hikikomori_2.0\Server\Server\obj\Debug\net
 C:\Projekty\Programowanie\best-hacks\Hikikomori_2.0\Server\Server\obj\Debug\net5.0\Server.dll
 C:\Projekty\Programowanie\best-hacks\Hikikomori_2.0\Server\Server\obj\Debug\net5.0\ref\Server.dll
 C:\Projekty\Programowanie\best-hacks\Hikikomori_2.0\Server\Server\obj\Debug\net5.0\Server.pdb
+C:\Users\SuperCiuper\Documents\GitHub\Hikikomori_2.0\Server\Server\obj\Debug\net5.0\Server.csproj.CopyComplete
