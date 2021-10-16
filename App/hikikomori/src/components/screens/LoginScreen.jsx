@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "./LoginScreen.css";
+
 const axios = require("axios");
 
 export default function LoginScreen() {
@@ -24,22 +26,20 @@ export default function LoginScreen() {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        Username:
+    <div className="LoginWrapper">
+      <form onSubmit={handleSubmit} className="LoginDialog">
         <input
           type="username"
           name="username"
-          placeholder="username"
+          placeholder="Username"
           value={username}
           onChange={(event) => setUsername(event.target.value)}
           required
         />
-        Password:
         <input
           type="password"
           name="password"
-          placeholder="password"
+          placeholder="Password"
           value={password}
           onChange={(event) => setPassword(event.target.value)}
           required
