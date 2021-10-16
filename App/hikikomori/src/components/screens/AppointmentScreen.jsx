@@ -27,7 +27,7 @@ export default function AppointmentScreen() {
                 setCurrentQuestion(() => findQuestion(answer.nextQuestion))
               }
             >
-              <p>{answer.answer}</p>
+              <p className="Button">{answer.answer}</p>
             </div>
           ))}
         </div>
@@ -37,10 +37,12 @@ export default function AppointmentScreen() {
     <div className="AppointmentScreenWrapper">
       <h1>MAKE AN APPOINTMENT</h1>
       <hr></hr>
-      <div id="appointment-questions">
-      {handleQuiz(currentQuestion)}
-      </div>
-      <button id="appointment-restart" onClick={() => setCurrentQuestion(findQuestion(`initial`))}>
+      <div id="appointment-questions">{handleQuiz(currentQuestion)}</div>
+      <button
+        id="appointment-restart"
+        className="Button"
+        onClick={() => setCurrentQuestion(findQuestion(`initial`))}
+      >
         Restart
       </button>
     </div>

@@ -28,10 +28,6 @@
   padding: 10px;
 }
 
-.logindialog input:: {
-  border-color: red;
-}
-
 .LoginDialog button {
   border-radius: 4px;
   margin: 10px;
@@ -41,6 +37,8 @@
   background-color: var(--tint-text-color);
   font-weight: bold;
   opacity: 0.8;
+  border: 0px;
+  font-weight: bold;
 }
 
 .LoginDialog button:hover {

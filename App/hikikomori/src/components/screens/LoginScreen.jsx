@@ -44,7 +44,7 @@ export default function LoginScreen() {
           onChange={(event) => setPassword(event.target.value)}
           required
         />
-        <button type="submit">Login</button>
+        <button type="submit">Log In</button>
       </form>
     </div>
   );

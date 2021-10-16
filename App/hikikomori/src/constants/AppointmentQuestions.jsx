@@ -14,6 +14,14 @@ export const questions = [
         answer: `I'm feeling some kind of pain`,
         nextQuestion: `pain`,
       },
+      {
+        answer: `I have a fever`,
+        nextQuestion: `fever`,
+      },
+      {
+        answer: `I have a cold or the flu`,
+        nextQuestion: `cold`,
+      },
     ],
   },
   {
