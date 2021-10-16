@@ -12,14 +12,16 @@ function NavBar() {
       </NavLink>
       <ul className="NavList">
         {Screens.map((screen) => (
-          <NavLink
-            to={`${screen.path}`}
-            className="NavListItem"
-            exact
-            activeClassName="active"
-          >
-            <li>{screen.name}</li>
-          </NavLink>
+          <li key={screen.key}>
+            <NavLink
+              to={`${screen.path}`}
+              className="NavListItem"
+              exact
+              activeClassName="active"
+            >
+              {screen.name}
+            </NavLink>
+          </li>
         ))}
       </ul>
     </nav>

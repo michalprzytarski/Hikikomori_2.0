@@ -10,9 +10,13 @@ function App() {
       <Router>
         <NavBar />
         <Switch>
-          {Screens.map((screen) => (
-            <Route path={screen.path} exact component={screen.screen} />
-          ))}
+          <ul style={{ listStyle: "none" }}>
+            {Screens.map((screen) => (
+              <li key={screen.key}>
+                <Route path={screen.path} exact component={screen.screen} />
+              </li>
+            ))}
+          </ul>
         </Switch>
       </Router>
     </div>

@@ -39,16 +39,19 @@ export default function AppointmentScreen() {
       return (
         <>
           <p id="question">{question.question}</p>
-          {question.answers.map((answer) => (
-            <div
-              className="AnswerList"
-              onClick={() =>
-                setCurrentQuestion(() => findQuestion(answer.nextQuestion))
-              }
-            >
-              <p className="Button">{answer.answer}</p>
-            </div>
-          ))}
+          <ul>
+            {question.answers.map((answer) => (
+              <li
+                key={answer.key}
+                className="AnswerList"
+                onClick={() =>
+                  setCurrentQuestion(() => findQuestion(answer.nextQuestion))
+                }
+              >
+                <p className="Button">{answer.answer}</p>
+              </li>
+            ))}
+          </ul>
         </>
       );
   }
