@@ -7,23 +7,15 @@ export const questions = [
     finalAnswer: undefined,
     doctor: undefined,
     answers: [
+      { key: 1, answer: `I'm injured`, nextQuestion: `injured` },
+      { key: 2, answer: `I'm feeling some kind of pain`, nextQuestion: `pain` },
+      { key: 3, answer: `I have a fever`, nextQuestion: `fever` },
+      { key: 4, answer: `I have a cold or the flu`, nextQuestion: `cold` },
       {
-        answer: `I'm injured`,
-        nextQuestion: `injured`,
+        key: 5,
+        answer: `I have psychological problem`,
+        nextQuestion: `psychological`,
       },
-      {
-        answer: `I'm feeling some kind of pain`,
-        nextQuestion: `pain`,
-      },
-      {
-        answer: `I have a fever`,
-        nextQuestion: `fever`,
-      },
-      {
-        answer: `I have a cold or the flu`,
-        nextQuestion: `cold`,
-      },
-      { answer: `I have psychological problem`, nextQuestion: `psychological` },
     ],
   },
   {
@@ -39,15 +31,9 @@ export const questions = [
     doctor: undefined,
     finalAnswer: undefined,
     answers: [
-      {
-        answer: `Head`,
-        nextQuestion: `head`,
-      },
-      {
-        answer: "Leg",
-        nextQuestion: `leg`,
-      },
-      { answer: "Stomach", nextQuestion: `stomach` },
+      { key: 1, answer: `Head`, nextQuestion: `head` },
+      { key: 2, answer: "Leg", nextQuestion: `leg` },
+      { key: 3, answer: "Stomach", nextQuestion: `stomach` },
     ],
   },
   {
@@ -70,8 +56,8 @@ export const questions = [
     finalAnswer: undefined,
     doctor: undefined,
     answers: [
-      { answer: `Yes`, nextQuestion: `bites` },
-      { answer: `No`, nextQuestion: `cold` },
+      { key: 1, answer: `Yes`, nextQuestion: `bites` },
+      { key: 2, answer: `No`, nextQuestion: `cold` },
     ],
   },
   {
@@ -87,8 +73,8 @@ export const questions = [
     finalAnswer: undefined,
     doctor: undefined,
     answers: [
-      { answer: `Yes`, nextQuestion: `tropical` },
-      { answer: `No`, nextQuestion: `cold` },
+      { key: 1, answer: `Yes`, nextQuestion: `tropical` },
+      { key: 2, answer: `No`, nextQuestion: `cold` },
     ],
   },
   {
