@@ -22,6 +22,13 @@ namespace Server.Controllers
         {
             this._context = context;
         }
+         
+        [HttpGet]
+        public JsonResult Get()
+        {
+            IEnumerable<User> users = _context.Users;
+            return new JsonResult(users);
+        }
 
         [HttpGet("{Username}/{Password}")]
         public JsonResult Get(string username, string password)
