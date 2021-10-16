@@ -11,7 +11,7 @@ export default function HomeScreen() {
           <button>make an appointment</button>
       </div>
       <div id="home-image">
-
+        <div id="circle"></div>
         <img src={doctor}></img>
       </div>
     </div>

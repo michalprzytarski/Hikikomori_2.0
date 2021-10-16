@@ -9,11 +9,11 @@
 }
 
 #home-image{
-
     width: 60vw;
     height: 90vh;
 }
 #home-image img{
+    z-index: 9;
     padding: 0;
     margin: 0;
     position: absolute;
@@ -72,6 +72,18 @@
     font-size: 30px;
     font-weight: 700;
 
+}
+
+#circle {
+    background: rgba(152, 193, 255, 0.233);
+    z-index: 2;
+    border-Radius: 50%;
+    width: 650px;
+    height: 650px;
+    top: 15vh;
+    left: 3vw;
+    position:relative;
+    box-Shadow: 0 0 20px rgb(0 0 0/ 0.15);
 }
 
 
