@@ -14,11 +14,30 @@ export default function AppointmentScreen() {
   }
 
   function handleQuiz(question) {
-    if (question.finalAnswer !== undefined) {
-      return <p className="FinalAnswer">{question.finalAnswer}</p>;
+    if (question.doctor === `HOSPITAL`)
+      return (
+        <p
+          className="FinalAnswer"
+          style={{ color: "red", fontWeight: "bold", fontSize: "32px" }}
+        >
+          {question.finalAnswer}
+        </p>
+      );
+    if (question.doctor !== undefined) {
+      return (
+        <>
+          <p className="FinalAnswer">{question.finalAnswer}</p>
+          <p
+            className="Button"
+            onClick={() => handleMakeAppointment(question.doctor)}
+          >
+            Make an appointment
+          </p>
+        </>
+      );
     } else
       return (
-        <div>
+        <>
           <p id="question">{question.question}</p>
           {question.answers.map((answer) => (
             <div
@@ -30,14 +49,18 @@ export default function AppointmentScreen() {
               <p className="Button">{answer.answer}</p>
             </div>
           ))}
-        </div>
+        </>
       );
+  }
+
+  function handleMakeAppointment(doctor) {
+    console.log(`Umów spotkanie z ${doctor}`);
   }
   return (
     <div className="AppointmentScreenWrapper">
       <h1>MAKE AN APPOINTMENT</h1>
       <hr></hr>
-      <div id="appointment-questions">{handleQuiz(currentQuestion)}</div>
+      {handleQuiz(currentQuestion)}
       <button
         id="appointment-restart"
         className="Button"

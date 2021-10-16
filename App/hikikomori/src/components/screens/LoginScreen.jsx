@@ -1,28 +1,14 @@
 import React, { useState } from "react";
 import "./LoginScreen.css";
 
-const axios = require("axios");
-
 export default function LoginScreen() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  function handleSubmit(event) {
-    axios
-      .post(
-        "http://localhost:44309/api/login",
-        {
-          user: { username: username, password: password },
-        },
-        { withCredentials: true }
-      )
-      .then((response) => {
-        console.log("Response from login: ", response);
-      })
-      .catch((error) => {
-        console.log("login error ", error);
-      });
-    event.preventDefault();
+  async function handleSubmit(event) {
+    const res = await fetch("https://localhost:44309/api/Login");
+    const usersArray = await res.json();
+    console.log(usersArray);
   }
 
   return (
