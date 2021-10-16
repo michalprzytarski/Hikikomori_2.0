@@ -1,8 +1,9 @@
 @import "../constants/Colors.css";
 
 .NavBar {
+  font-family: "Roboto Condensed";
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   min-height: 10vh;
   background-color: var(--backgroud-color);
@@ -10,7 +11,7 @@
 }
 
 .NavList {
-  width: 50%;
+  width: 50vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -32,4 +33,9 @@
 
 .NavBar h1 {
   color: var(--tint-text-color);
+  font-size: 30px;
+  letter-spacing: 10px;
+  position: relative;
+  left: 10vw;
+
 }
