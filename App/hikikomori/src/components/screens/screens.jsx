@@ -14,5 +14,10 @@ export const Screens = [
   },
   { key: 3, name: "Calendar", path: "/calendar", screen: CalendarScreen },
   { key: 4, name: "FAQ", path: "/faq", screen: FaqScreen },
-  { key: 5, name: "Log in", path: "/login", screen: LoginScreen },
 ];
+
+export const loginScreen = {
+  name: "Log in",
+  path: "/login",
+  screen: LoginScreen,
+};
