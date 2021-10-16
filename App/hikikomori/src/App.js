@@ -11,9 +11,21 @@ function App() {
   return (
     <div className="App">
       <Router>
+<<<<<<< HEAD
+        <NavBar />
+        <Switch>
+          {/* <ul style={{ listStyle: "none" }}>
+            {Screens.map((screen) => (
+              <li key={screen.key}>
+                <Route path={screen.path} exact component={screen.screen} />
+              </li>
+            ))}
+          </ul> */}
+=======
         <UserContext.Provider value={{ username, setUsername }}>
           <NavBar />
 
+>>>>>>> 952062bf5eeb34fd93b0e3a687802fe8315c99d2
           <Route
             path={Screens.find((x) => x.key === 1).path}
             component={Screens.find((x) => x.key === 1).screen}

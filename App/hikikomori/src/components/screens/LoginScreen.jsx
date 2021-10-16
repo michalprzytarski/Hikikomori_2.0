@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+import React, { useState } from "react";
+=======
 import React, { useState, useContext } from "react";
 import { UserContext } from "../../userContext";
+>>>>>>> 952062bf5eeb34fd93b0e3a687802fe8315c99d2
 import "./LoginScreen.css";
 
 export default function LoginScreen() {
@@ -12,12 +16,15 @@ export default function LoginScreen() {
     console.log("start fetchowania");
     const res = await fetch("https://localhost:44309/api/Login");
     const user = await res.json();
+<<<<<<< HEAD
+=======
     console.log(user);
 
     if (user !== undefined) {
       setUsername(user.username);
     }
 
+>>>>>>> 952062bf5eeb34fd93b0e3a687802fe8315c99d2
   }
 
   return (
