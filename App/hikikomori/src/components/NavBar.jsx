@@ -29,9 +29,10 @@ function NavBar() {
             </NavLink>
           </li>
         ))}
+        <li>
+          <LoggingButton />
+        </li>
       </ul>
-      <LoggingButton />
-      <button onClick={() => console.log(username)}>TEST</button>
     </nav>
   );
 }
