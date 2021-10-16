@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Server.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,16 @@ namespace Server.Controllers
     [ApiController]
     public class ClinicController : ControllerBase
     {
+        private readonly hikikomoriMedicalDBContext _context;
+        public ClinicController(hikikomoriMedicalDBContext context)
+        {
+            this._context = context;
+        }
+        [HttpGet]
+        public JsonResult Get()
+        {
+            IEnumerable<Clinic> clinics = _context.Clinics;
+            return new JsonResult(clinics.ToList());
+        }
     }
 }

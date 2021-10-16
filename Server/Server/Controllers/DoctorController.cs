@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Server.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,36 +13,17 @@ namespace Server.Controllers
     [ApiController]
     public class DoctorController : ControllerBase
     {
-        // GET: api/<DoctorController>
+        private readonly hikikomoriMedicalDBContext _context;
+        public DoctorController(hikikomoriMedicalDBContext context)
+        {
+            this._context = context;
+        }
         [HttpGet]
-        public IEnumerable<string> Get()
+        public JsonResult Get()
         {
-            return new string[] { "value1", "value2" };
+            IEnumerable<Doctor> doctors = _context.Doctors;
+            return new JsonResult(doctors.ToList());
         }
 
-        // GET api/<DoctorController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<DoctorController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/<DoctorController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<DoctorController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }

@@ -1,22 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
+
+#nullable disable
 
 namespace Server.Models
 {
-    public class Appointment
+    public partial class Appointment
     {
-        [Key]
-        public int id { get; set; }
-        public DateTime date { get; set; }
-        public int clinic_id { get; set; }
-        [ForeignKey("clinic_id")]
-        public Clinic clinic { get; set; }
-        public int doctor_id { get; set; }
-        [ForeignKey("doctor_id")]
-        public Doctor doctor { get; set; }
+        public Appointment()
+        {
+            Results = new HashSet<Result>();
+        }
+
+        public int Id { get; set; }
+        public DateTime DateTime { get; set; }
+        public int DoctorId { get; set; }
+        public string UserId { get; set; }
+
+        public virtual Doctor Doctor { get; set; }
+        public virtual User User { get; set; }
+        public virtual ICollection<Result> Results { get; set; }
     }
 }

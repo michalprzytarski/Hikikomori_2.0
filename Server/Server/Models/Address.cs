@@ -1,21 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+
+#nullable disable
 
 namespace Server.Models
 {
-    public class Address
+    public partial class Address
     {
-        [Key]
-        public int id { get; set; }
-        public int post_code { get; set; }
-        public int building_number { get; set; }
-        public string street { get; set; }
-        public string city { get; set; }
-        public  List<Clinic> clinics { get; set; }
-        public List<User> users { get; set; }
+        public Address()
+        {
+            Clinics = new HashSet<Clinic>();
+            Users = new HashSet<User>();
+        }
 
+        public int Id { get; set; }
+        public decimal PostCode { get; set; }
+        public int BuildingNumber { get; set; }
+        public string Street { get; set; }
+        public string City { get; set; }
+
+        public virtual ICollection<Clinic> Clinics { get; set; }
+        public virtual ICollection<User> Users { get; set; }
     }
 }

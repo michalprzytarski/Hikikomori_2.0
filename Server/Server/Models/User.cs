@@ -1,24 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
+
+#nullable disable
 
 namespace Server.Models
 {
-    public class User
+    public partial class User
     {
-        [Key]
-        public string username { get; set; }
-        public string password { get; set; }
-        public string name { get; set; }
-        public string surname { get; set; }
-        public DateTime birth_date { get; set; }
-        public int address_id { get; set; }
-        [ForeignKey("address_id")]
-        public Address address { get; set; }
-        public int trust_score { get; set; }
-        public List<Referral> referrals { get; set; }
+        public User()
+        {
+            Appointments = new HashSet<Appointment>();
+            Referrals = new HashSet<Referral>();
+        }
+
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public DateTime BirthDate { get; set; }
+        public decimal TrustScore { get; set; }
+        public int AddressId { get; set; }
+
+        public virtual Address Address { get; set; }
+        public virtual ICollection<Appointment> Appointments { get; set; }
+        public virtual ICollection<Referral> Referrals { get; set; }
     }
 }

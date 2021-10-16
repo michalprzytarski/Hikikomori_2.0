@@ -1,20 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
+
+#nullable disable
 
 namespace Server.Models
 {
-    public class Referral
+    public partial class Referral
     {
-        [Key]
-        public int id { get; set; }
-        public DateTime expiration_date { get; set; }
-        public string specialization { get; set; }
-        public string user_id { get; set; }
-        [ForeignKey("user_id")]
-        public User User { get; set; }
+        public int Id { get; set; }
+        public DateTime ExpirationDate { get; set; }
+        public string Specjalization { get; set; }
+        public string UserId { get; set; }
+
+        public virtual User User { get; set; }
     }
 }
